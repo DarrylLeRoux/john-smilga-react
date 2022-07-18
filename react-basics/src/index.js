@@ -30,8 +30,7 @@ function Booklist() {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const { id, img, title, author } = book;
-        return <Book key={id} book={book}></Book>;
+        return <Book key={book.id} {...book} />;
       })}
     </section>
   );
@@ -39,7 +38,8 @@ function Booklist() {
 
 const Book = (props) => {
   // props destructuring
-  const { img, title, author } = props.book;
+  // each book mapped over has an object of book containing the keys - so you need to destructure that object
+  const { img, title, author } = props;
   return (
     <article className="book">
       <img src={img} alt="book" />
