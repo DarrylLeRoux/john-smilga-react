@@ -14,7 +14,7 @@ const UseEffectBasics = () => {
   const handleClick = () => {
     setValue(value + 1);
   };
-  useEffect(() => {});
+
   return (
     <>
       <h1>{value}</h1>
