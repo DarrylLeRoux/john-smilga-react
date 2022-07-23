@@ -7,7 +7,7 @@ const UseEffectBasics = () => {
 
   useEffect(() => {
     value === 0
-      ? (document.title = "No new messages")
+      ? (document.title = document.title)
       : (document.title = `New Messages ${value}`);
   });
 
