@@ -8,7 +8,16 @@ const MultipleReturns = () => {
 
   useEffect(() => {
     fetch(url)
-      .then((res) => res.json())
+      // check for status code
+      .then((res) => {
+        if (res.status >= 200 && res.status <= 299) {
+          return res.json();
+        } else {
+          setIsLoading(false);
+          setIsError(true);
+          throw new Error(res.statusText);
+        }
+      })
       .then((user) => {
         // When getting the json, destructure the object for the user info
         const { login } = user;
