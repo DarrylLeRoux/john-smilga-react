@@ -275,11 +275,11 @@ p {
   margin-right: 1rem;
 }
 .users h4 {
-  margin-bottom: 0rem;
+  margin-bottom: 0.15rem;
 }
-.github_profile {
+.users a {
   color: var(--clr-grey-5);
-  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 .products {
