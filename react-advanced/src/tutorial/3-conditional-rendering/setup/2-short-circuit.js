@@ -19,6 +19,13 @@ const ShortCircuit = () => {
         toggle error
       </button>
       {isError && <h1>Error...</h1>}
+      {isError ? (
+        <p>there is an error...</p>
+      ) : (
+        <div>
+          <h1>There is no error</h1>
+        </div>
+      )}
     </>
   );
 };
